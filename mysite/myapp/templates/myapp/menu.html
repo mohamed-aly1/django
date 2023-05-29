@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta htt-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive coffee website</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <!-- link to js-->
+    <script src="main.js"></script>
+    <!--box icons-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <!--navbar-->
+    <header>
+        <a href="#" class="logo">
+            <img src="{% static '/img/logo.png' %}">
+        </a>
+        <!--menu-icon-->
+        <i class='bx bx-menu' id="--menu-icon--"></i>
+        <!--links-->
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#customers">Customers</a></li>
+        </ul>
+        <!--icon-->
+        <div class="header-icon">
+            <i class='bx bx-cart-alt'></i>
+            <i class='bx bx-search' id="search-icon"></i>
+
+        </div>
+        <!-- search box-->
+        <div class="search-box">
+            <input type="search" name="" id="" placeholder="Seach Here...">
+        </div>
+
+    </header>
+
+    <section class="products" id="products">
+        <div class="heading">
+            <h2>Menu</h2>
+        </div>
+        <!-- container-->
+        <div class="products-container">
+            {% for x in items %}
+            <div class="box">
+                <img src="{{x.photo.url}}">
+
+
+                <h3>{{x.name}}</h3>
+                <div class="content">
+                    <span>{{x.price}}$</span>
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+</body>

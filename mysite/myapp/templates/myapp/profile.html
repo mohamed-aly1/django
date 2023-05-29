@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta htt-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive coffee website</title>
+    <!--link to css-->
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/profile.css'%}">
+    <!-- link to js-->
+    <script src="main.js"></script>
+    <!--box icons-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+
+
+    <!--navbar-->
+    <header>
+        <a href="#" class="logo">
+            <img src="{% static '/media/logo.png' %}">
+        </a>
+        <!--menu-icon-->
+        <i class='bx bx-menu' id="--menu-icon--"></i>
+        <!--links-->
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="{% url 'menu' %}">Products</a></li>
+            <li><a href="#customers">Customers</a></li>
+        </ul>
+        <!--icon-->
+        <div class="header-icon">
+            <i class='bx bx-cart-alt'></i>
+            <i class='bx bx-search' id="search-icon"></i>
+
+        </div>
+        <!-- search box-->
+        <div class="search-box">
+            <input type="search" name="" id="" placeholder="Seach Here...">
+        </div>
+
+    </header>
+
+    <!-- End -->
+    </div>
+    <!-- End -->
+
+    <!-- Sidenav -->
+    <div class="sidenav">
+        <div class="profile">
+            <img src="{% static '/media/nura.png' %}" width="500" height="100">
+
+            <div class="name">
+                {{ user.Username }}
+            </div>
+        </div>
+
+        <div class="sidenav-url">
+            <div class="url">
+                <a href="#settings">Settings</a>
+
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- Main -->
+    <div class="main">
+        <h2>Details</h2>
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>:</td>
+                            <td> {{ user.Username }} </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td class="input">{{ user.Email }}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>:</td>
+                            <td>{{ user.Address }}</td>
+                        </tr>
+
+                        <tr>
+                            <td>Number</td>
+                            <td>:</td>
+                            <td>{{ user.Phone }}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- End -->
+
+
+        </section>
+
+
+</body>
+
+</html>

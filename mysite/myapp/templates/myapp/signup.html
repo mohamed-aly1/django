@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/signup.css'%}">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="{% static '/media/logo.png' %}">
+        </a>
+        <!--menu-icon-->
+        <i class='bx bx-menu' id="--menu-icon--"></i>
+        <!--links-->
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="{% url 'menu' %}">Products</a></li>
+            <li><a href="#customers">Customers</a></li>
+
+        </ul>
+        <!--icon-->
+        <div class="header-icon">
+            <i class='bx bx-cart-alt'></i>
+            <i class='bx bx-search' id="search-icon"></i>
+
+        </div>
+        <!-- search box-->
+
+    </header>
+    <section>
+        <div class="input">
+
+            <form method="POST" claSs="the-form">
+                {% csrf_token %}
+
+                <h2>SIGN UP</h2>
+
+
+                <label for="username">username</label>
+                <input type="username" name="username" id="username" placeholder="Enter your username">
+                <br>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+                <br>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+                <br>
+
+                <label for="phone">phone</label>
+                <input type="phone" name="phone" id="phone" placeholder="Enter your number">
+                <br>
+
+                <label for="address">Address</label>
+                <input type="address" name="address" id="address" placeholder="Enter your address">
+                <br>
+
+
+                <button type="submit" class="btn">Register</button>
+                <a href="{% url 'login' %}" class="main-btn">already have acc </a>
+
+            </form>
+
+
+        </div>
+    </section>
+
+</body>
+
+</html>

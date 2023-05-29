@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta htt-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st Responsive coffee website</title>
+    <!--link to css-->
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <!-- link to js-->
+    <script src="main.js"></script>
+    <!--box icons-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <!--navbar-->
+    <header>
+        <a href="#" class="logo">
+            <img src="{% static '/media/logo.png' %}">
+        </a>
+        <!--menu-icon-->
+        <i class='bx bx-menu' id="--menu-icon--"></i>
+        <!--links-->
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="{% url 'menu' %}">Products</a></li>
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="{% url 'profile' %}">Profile</a></li>
+        </ul>
+        <!--icon-->
+        <div class="header-icon">
+            <i class='bx bx-cart-alt'></i>
+            <i class='bx bx-search' id="search-icon"></i>
+
+        </div>
+        <!-- search box-->
+
+
+    </header>
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>Start Your day <br> with Coffee </h1>
+            <p>coffee is all you need to focus on Your goals</p>
+            <button class="btn"><a href="{% url 'menu' %}" class="main-btn">shop now</a></button>
+        </div>
+
+        <div class="home-img">
+            <img src="{% static '/media/main.png' %}">
+        </div>
+
+    </section>
+    <!--About-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="{% static '/media/about.jpg' %}">
+        </div>
+        <div class="about-text">
+            <h2>Our History</h2>
+            <p>coffee houses began in the Ottoman Empire. Since liquor and bars were off-limits to most practicing Muslims, </p>
+            <p>coffeehouses provided an alternative place to gather, socialize and share ideas. Coffee's affordability and egalitarian structure—anyone</p>
+            <p>could come in and order a cup—eroded centuries of social norms</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </section>
+    <!-- products-->
+    <section class="products" id="products">
+        <div class="heading">
+            <h2>Our Categories</h2>
+
+        </div>
+        <!-- container-->
+        <div class="products-container">
+            <div class="box">
+                <img src="{% static '/media/p1.png' %}">
+                <a href="{% url 'menu' %}" class="main-btn"></a>
+                <h3>hot drinks</h3>
+                <div class="content">
+
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="{% static '/media/p2.png' %}">
+                <a href="{% url 'menu' %}" class="main-btn">coffe</a>
+                <h3>coffe</h3>
+                <div class="content">
+
+
+                </div>
+            </div>
+            <div class="box">
+                <img src="{% static '/media/p3.png' %}">
+                <a href="{% url 'menu' %}" class="main-btn"></a>
+                <h3>COlD DRINKS</h3>
+                <div class="content">
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--Customers-->
+    <section class="customers" id="customers">
+        <div class="heading">
+            <h2>Our Customer's </h2>
+        </div>
+        <!-- container-->
+        <div class="customers-container">
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <h2>tuka</h2>
+                <img src="{% static '/media/tkmn.png' %}">
+
+            </div>
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <h2>NURA</h2>
+                <img src="{% static '/media/nura.png' %}">
+
+            </div>
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+
+                <h2>manar</h2>
+                <img src="{% static '/media/ss.png' %}">
+
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="footer-box">
+            <h2>Coffee shop </h2>
+            <p>coffee shop nura , nuraa , sara , manar , tuka , salma</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h3>Support</h3>
+            <li> <a href="#">Product</a></li>
+            <li> <a href="#">Help & Support</a></li>
+            <li> <a href="#">Return Policy</a></li>
+            <li> <a href="#">Terms Of Use</a></li>
+
+        </div>
+        <div class="footer-box">
+            <h3>View Guides</h3>
+            <li> <a href="#">Features</a></li>
+            <li> <a href="#">careers</a></li>
+            <li> <a href="#">Blog posts</a></li>
+            <li> <a href="#">Our branches</a></li>
+
+        </div>
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <span> <i class='bx bx-map'></i> 250 Cairo Gardens, Egypt</span>
+            <span> <i class='bx bx-phone'></i> +20 078 987 2212</span>
+            <span> <i class='bx bx-envelope'></i> coffee@shop.com</span>
+        </div>
+    </section>
+
+
+
+    <!--link to js-->
+    <script src="coffe.js"></script>
+</body>
+
+</html>
